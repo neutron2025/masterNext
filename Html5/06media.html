@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <!-- 在页面中插入音频文件 -->
+        <audio src="song.mp3"></audio>
+        <hr>
+        <!-- 在页面中插入视频文件 -->
+        <!-- 3. audio和video标签的属性 -->
+        <!-- autoplay	页面加载时，自动播放
+            controls	是否出现播放、暂停等控件
+            loop	是否重复播放
+            meted	默认被静音
+            preload	页面加载就开始加载音频，并预备播放，如果出现 autoplay，则忽略该属性 -->
+        <video src="https://vjs.zencdn.net/v/oceans.mp4" width="500" height="280" controls="container"   loop="loop" muted="muted"></video>
+    
+        <hr>
+        <!-- 4. audio和video对象的方法 -->
+        <!-- 方法	意义
+            load()	加载动态生成的音频
+            play()	播放
+            pause()	暂停 -->
+        <script>
+            var x = document.getElementById("myAudio");
+            
+        </script>
+
+        <hr>
+        <!-- unpkg : use the latest version of Video.js -->
+<link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
+<script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+
+<!-- unpkg : use a specific version of Video.js (change the version numbers as necessary) -->
+<link href="https://unpkg.com/video.js@8.3.0/dist/video-js.min.css" rel="stylesheet">
+<script src="https://unpkg.com/video.js@8.3.0/dist/video.min.js"></script>
+
+<!-- cdnjs : use a specific version of Video.js (change the version numbers as necessary) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.3.0/video-js.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/8.3.0/video.min.js"></script>
+<video
+    id="my-player"
+    class="video-js"
+    controls
+    preload="auto"
+    poster="https://vjs.zencdn.net/v/oceans.png"
+    data-setup='{}'>
+    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+    <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
+    <source src="https://vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source>
+    <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">
+        supports HTML5 video
+        </a>
+    </p>
+</video>
+
+    </body>
+</html>
+
+<!-- 默认的 controls 不好看，能设置样式吗？
+答案是不可以！但是你可以去掉controls，然后自己写div，再绑定事件，控制播放和暂停。
+
+更推荐的是使用 video.js 这类插件来优化播放体验。 -->https://videojs.com/

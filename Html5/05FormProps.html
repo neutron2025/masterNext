@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>form 属性</title>
+    </head>
+    <body>
+        <!-- 1. placeholder，显示描述信息 -->
+        <form action="">
+            <input type="search" name="keyword" placeholder="描述信息" id="">
+        </form>
+        <hr>
+        <!-- 2. autocomplete，自动完成 -->
+        <form action="" autocomplete="on">
+            昵称：<input type="text"  name="nickname" id="">
+            email: <input type="email" name="email" autocomplete="on" id="">
+            <input type="submit" name="" id="">
+        </form>
+        <hr>
+        <!-- 3. autofocus，表单自动获取焦点 -->
+        <form action="">
+            用户名: <input type="text" name="username" autofocus>
+        </form>
+        <hr>
+        <!-- 4. list 和 datalist 元素 -->
+        <form action="">
+            站点地址：<input type="url" name="link" list="url-list" id="">
+            <datalist id="url-list">
+                <option label="baidu" value="http://baidu.com"></option>
+                <option label="google" value="http://google.com"></option>
+            </datalist>
+        </form>
+        <hr>
+        <!-- 5. min、max 和 step 滑块最小值、最大值和步长 -->
+        <form action="">
+            <input type="range" min="0" max="100" value="0" step="20">
+        </form>
+        <hr>
+        <!-- 6. required 必填 -->
+        <form action="">
+            <input type="text" name="username" required>
+            <input type="submit" value="提交">
+        </form>
+        <hr>
+        <!-- 7. pattern 验证 -->
+        <form action="">
+            <input type="text" pattern="[0-9]{4}" title="只能输入0-9的数字，且刚好4位数">
+            <input type="submit" value="提交">
+        </form>
+    </body>
+</html>

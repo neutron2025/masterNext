@@ -1,0 +1,117 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>页面标题</title>
+</head>
+<body>
+    这是正文内容
+    <h1>1号标题</h1>
+  <h2>2</h2>
+  <h3>3</h3>
+  <h4>4号标题</h4>
+<h5>5号标题</h5>
+<h6>6号标题</h6>
+<p>这是一个段落哦</p>
+<p>这是另一个段落</p>
+<a href="http://hao123.com">点我在当前页面打开</a>
+<a href="http://hao123.com" target="_blank">点我在新窗口打开</a>
+<img src="c:\Users\ADMINI~1\AppData\Local\Temp\SGPicFaceTpBq\110288\6B512ABC.png" alt="手">
+<img src="c:\Users\ADMINI~1\AppData\Local\Temp\SGPicFaceTpBq\110288\6B52123E.gif" width="142" height="142" alt="图片无法显示时的内容" title="提交文本">
+<table border="1">
+    <tr>
+        <th>表头</th>
+        <th>12</th>
+        <td>13</td>
+        <caption>标题说明</caption>
+    </tr>
+    <tr >
+        <td>11</td>
+        <td>12</td>
+        <td rowspan="2">13</td>
+        
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>12</td> 
+    </tr>
+    <tr>
+        <td colspan="2">合并单元格</td>
+        <td>cool</td>
+    </tr>
+
+
+</table>
+<ul>
+    <li>首页</li>
+    <li>新闻</li>
+    <li>关于我们</li>
+    <li>联系我们</li>
+</ul>
+<ol>
+    <li>首页</li>
+    <li>首页</li>
+    <li>首页</li>
+    <li>首页</li>
+</ol>
+<dt>
+    <dl>自定义</dl>
+    <dl>自定义</dl>
+    <dl>自定义</dl>
+</dt>
+
+<form action="服务器文件" method="传输方式">
+    用户名：<input type="text" name="username" placeholder="用户名">
+    <br />
+    密码：<input type="password" name="password" />
+    <br />
+    性别：<input type="radio" name="sex" value="男" />男
+        <input type="radio" name="sex" value="女" /> 女
+        <p> 注意：同一组的单选按钮，name取值一定要一致，这样同一组的单选按钮才可以起到单选的作用。</p>
+    <br />
+    爱好：<input type="checkbox" name="music[]" checked />音乐
+    <input type="checkbox" name="music[]" />艺术
+    <input type="checkbox" name="music[]" />编程
+    <br />
+    国籍：<select name="country">
+        <option value="中国">china</option>
+        <option value="美国" selected>USA</option>
+        <option value="澳大利亚">AUS</option>
+        <option value="加拿大">CAD</option>
+    </select>
+    <br />
+    个性签名：
+    <textarea name="sign" id="" cols="30" rows="10"></textarea>
+    <input type="submit" value="提交按钮" id=""/>
+    <input type="reset" value="重置按钮" id=""/>
+
+</form>
+
+
+    1、显式联系：显式联系通过<label>的 "for" 属性和目标标签的 ID 来完成
+    
+    <form>
+                <input type="radio"  id="yes">确定
+                <input type="radio"  id="no"> 取消
+    </form> 
+    <br>
+    <label for="yes">点击这里也可选择 确定 选项</label>
+    <br />
+    <label for="no">点击这里也可以选择 取消 选项</label>
+    <br />
+    2、隐式联系：隐式联系可通过标签嵌套完成
+不嵌套label标签时，鼠标放在字上变为了 "工" 形，是不可以点击的
+嵌套到label标签中时，鼠标移动到字上时，是可点击的。
+<br />
+<form>
+     <label><input type="radio" >确定</label>
+     <label><input type="radio" >取消</label>
+</form>
+
+<br />  换行
+<hr />  分割线
+<pre></pre>     预格式文本
+<div>定义一个div块(块级元素)</div> 
+<span> 定义一个span文本容器(行内元素)</span>  
+
+</body>
+</html>

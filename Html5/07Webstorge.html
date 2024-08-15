@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Web Storage</title>
+    </head>
+    <body>
+        <!-- 1. localStorage -->
+        <script>
+
+            // 设置值
+            localStorage.setItem('name','arron');
+            // 设置值简化写法
+            localStorage.name='arron';
+
+            // 取值
+            localStorage.getItem('name');
+            // 取值简化写法
+            localStorage.name;
+
+            // 删除指定的 key
+            localStorage.removeItem('name');
+            // 清空
+            localStorage.clear();
+
+
+        </script>
+        <!-- 2. sessionStorage -->
+        <script>
+            // 设置值
+            sessionStorage.setItem('name', 'aaron');
+            // 简化写法
+            sessionStorage.name = 'aaron'
+
+            // 取值
+            sessionStorage.getItem('name')
+            // 简化写法
+            sessionStorage.name
+
+            // 删除指定的 key
+            sessionStorage.removeItem('name');
+            // 清空
+            sessionStorage.clear();
+        </script>
+        <!-- 3. localStorage 与 sessionStorage 的区别
+            sessionStorage	      localStorage
+            窗口或标签页关闭失效	   持久储存
+            只在当前窗口或标签页可见	同源窗口或标签页共享 -->
+    </body>
+</html>

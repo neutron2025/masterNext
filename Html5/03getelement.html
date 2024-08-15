@@ -1,0 +1,39 @@
+<!-- 1. 过去获取 DOM 对象 -->
+<html>
+    <head>
+        <title>Selector API</title>
+    </head>
+    <body>
+        <!-- 1. 过去获取 DOM 对象  by id -->
+        <div id="foo"></div>
+        <script>
+            var foo =document.getElementById("foo")
+        </script>
+        <!-- 1. 过去获取 DOM 对象  by name -->
+        <input type="text" name="boo">
+        <script>
+            var boo = document.getElementsByName("boo")
+        </script>
+        <!-- 1. 过去获取 DOM 对象  by tag -->
+        <input type="text">
+        <script>
+            var input = document.getElementsByTagName("input")
+        </script>
+
+        <!-- 使用 Selectors API 获取 DOM 对象 -->
+        <script>
+            // 返回body节点
+            document.querySelector("body")
+            // 返回id为k的节点
+            document.querySelector("#k")
+            // 返回id为k的节点下的第一个span节点
+            document.querySelector("#k").querySelector("span")
+            // 返回id为k的节点下的第一个span节点
+            document.querySelector("#k span")
+            // 返回所用tagName为li的节点集合（NodeList）
+            document.querySelectorAll("li")
+            // 返回class为li的div
+            document.querySelectorAll("div .li")
+        </script>
+    </body>
+</html>

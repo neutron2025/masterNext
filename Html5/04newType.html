@@ -1,0 +1,49 @@
+<!-- HTML5 中新增几个表单类型，其中大的变化，是增加了自动验证功能。 -->
+
+<html>
+    <head>
+        <title>
+            HTML5 中新增几个表单类型
+        </title>
+    </head>
+    <body>
+        <!-- email类型用于应该包含电子邮件地址的输入域。在提交表单时，会自动验证email域的格式。 -->
+        <form action="">
+            <input type="email" name="email">
+            <input type="submit">
+        </form>
+        <hr />
+        <!-- url类型用于应该包含 URL 地址的输入域。在提交表单时，会自动验证url域的格式。 -->
+        <form action="">
+            <input type="url" name="url">
+            <input type="submit" value="提交url">
+        </form>
+        <hr>
+
+        <form action="">
+            <!-- number类型用于应该包含数值的输入域，可以设定对所接受的数字的限定： -->
+            <input type="number" name="poiunts" min="1" max="20">
+            <hr>
+            <!-- range类型用于应该包含一定范围内数字值的输入域。range类型显示为滑动条，可以设定对所接受的数字的限定： -->
+            <input type="range" name="points" min="1" max="10">
+            <hr>
+            <!-- HTML5 拥有多个可供选取日期和时间的新输入类型：
+                date - 选取日、月、年
+                month - 选取月、年
+                week - 选取周和年
+                time - 选取时间（小时和分钟）
+                datetime - 选取时间、日、月、年（UTC 时间）
+                datetime-local - 选取时间、日、月、年（本地时间）
+                下面的例子允许您从日历中选取一个日期： -->
+            <input type="date" name="date" id="">
+            <hr>
+            <!-- search类型用于搜索域，比如站点文章搜索。search域显示为常规的文本域。 -->
+            <input type="search" name="search" id="">
+            <hr>
+            <input type="week" name="datetime" id="">
+            <hr>
+            <input type="datetime-local" name="timelocal" id="">
+        </form>
+
+    </body>
+</html>

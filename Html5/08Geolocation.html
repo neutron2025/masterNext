@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Geolocation</title>
+    </head>
+    <body>
+        <script>
+/*
+    1. getCurrentPosition获取定位方法
+    10秒超时
+navigator.geolocation.getCurrentPosition(updateLocation, handleLocationError, {timeout: 10000});
+第一个参数为 updateLocation，成功获取定位的回调。
+第二个参数为 handleLocationError，获取定位失败的回调。
+第三个参数为可选{}，为 Json 对象，是设置部分请求的特性。
+其中第三个可选参数，又有以下几个可选
+
+enableHighAccuracy：是否高度精确模式，默认为false。注意开启此模式，资源和时间开销更多，而且可能结果没有差别。
+timeout，多少秒超时。
+maxmumAge，重新计算定位的间隔，设置为 0，每次都重新获取。设置为Infinity，则仅在第一次获取。
+
+
+    2. watchPosition位置发生变化，就重新获取，更新数据
+监控位置是否发生变化
+var watchId = navigator.geolocation.watchPosition(updateLocation, handleLocationError);
+
+停止获取定位
+navigator.geolocation.clearWatch(watchId);
+**/
+            
+             // 获取到的数据
+            function updateLocation(position) {
+                console.log('纬度：', position.coords.latitude);
+                console.log('经度：', position.coords.longitude);
+                console.log('精确度，单位m：', position.coords.accuracy);
+                console.log('海拔高度，单位m：', position.coords.altitude);
+                console.log('海拔高度准确度，单位m：', position.coords.altitudeAccuracy);
+                console.log('行进方向，相对于正北：', position.coords.heading);
+                console.log('速度，单位m/s：', position.coords.speed);
+            }
+
+            // 错误信息
+            function handleLocationError(error) {
+                switch (error.code) {
+                case 0:
+                    console.log("未知错误" + error.message);
+                    break;
+                case 1:
+                    console.log("用户拒绝使用定位");
+                    break;
+                case 2:
+                    console.log("获取失败" + error.message);
+                    break;
+                case 3:
+                    console.log("获取超时");
+                    break;
+                }
+            }
+
+            navigator.geolocation.getCurrentPosition(updateLocation, handleLocationError, { timeout: 10000 });
+
+
+
+        </script>
+    </body>
+</html>
