@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>选择器与基本样式</title>
+        <!-- 1.外部样式：写在外部css文件中，然后引用过来。 -->
+        <link href="01.css" rel="stylesheet"/>
+        <!-- 2.内页样式：写在html的<head></head>标签里面。 -->
+        <style>
+            body {
+                font-size: 12px;
+            }
+            p {
+                font-size: 14px;
+                color: yellow;
+            }
+            /* 标签选择器 */
+            div {
+
+            }
+            h1 {
+
+            }
+            /* id 选择器 */
+            #tue {
+                color: brown;
+            }
+            h1#tue {
+                color: rgb(165, 42, 138);
+            }
+            /* class 选择器 */
+            .red {
+                color: aqua;
+            }
+            h1.red {
+                color: chartreuse;
+            }
+            /* 属性选择器 */
+            h2[onclick="2"]{
+                color: violet;
+            }
+            h2[title="3"]{
+                color: violet;
+            }
+            /* 后代选择器 所有后代*/
+            div p {
+                color: tomato;
+                background-color: azure;
+            }
+            .yellow span{
+                color: bisque;
+                font-size: medium;
+            }
+            /* 子类选择器 只有儿子*/
+            .yellow > span{
+                color: blue;
+            }
+            /* 通用选择器  html 中任意标签元素*/
+            *{
+                color: black;
+            }
+            /* 分组选择器  html 中多个标签元素设置同一个样式*/
+            h3, span {
+                color: red;
+            }
+            /* 伪类选择器 当已有元素处于的某个状态时，为其添加对应的样式*/
+            a:hover{color:red;}
+
+            /* 根据权值来判断使用哪个 css 样式 */
+            /* 标签的权值为 1，类选择符的权值为 10，ID 选择符的权值最高为 100。使用权值高的 css 样式 */
+            p {color:red;}                  /*权值为1*/
+            p span {color:green;}           /*权值为1+1=2*/
+            .warning {color:white;}         /*权值为10*/
+            p span.warning {color:purple;}  /*权值为1+1+10=12*/
+            #footer .note p {color:yellow;} /*权值为100+10+1=111*/
+
+
+            /* 重叠： 当有相同权重的样式存在时，后面的样式会覆盖前面的样式 */
+            p {color:red;}
+            p {color:green;}
+            
+            /* 有些特殊的情况需要为某些样式设置具有最高权值，这时候我们可以使用!important 来解决 */
+            p {color:red!important;}
+            p {color:green;}
+        </style>
+
+    </head>
+    <body>
+        <p>hwllo this is CSS3 world</p>
+        <h1>星期一</h1>
+        <h1 id="tue">星期二</h1>
+        <h1>星期三</h1>
+        <h1>星期一</h1>
+        <h1 class="red">星期二</h1>
+        <h1 class="red">星期三</h1>
+        <p class="red">星期四</p>
+        <h2 onclick="2">123456</h2>
+        <h2 title="3">123456</h2>
+        <div><a href="#">你好</a></div>
+        <div><p>今天的天气很好</p></div>
+        <div><b>中午吃什么呢？</b></div>
+        <div class="yellow">
+            <span>天空之城</span>
+            <p>
+                <span>龙猫</span>
+            </p>
+        </div>
+        <h4>星期三</h4>
+        <h3>星期三</h3>
+        <span>相当于下面代码：h1{color:red;}
+            span{color:red;}
+        </span>
+        <h1>星期三</h1>
+        <a href="http://baidu.com">伪类选择器</a>
+
+        
+    </body>
+</html>
